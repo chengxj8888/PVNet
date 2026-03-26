@@ -1,0 +1,85 @@
+data:
+  data_dir: ./Datasets/SemanticKITTI
+  dataloader: KITTI
+  dataset_norm: false
+  grid_sizes:
+  - - 128
+    - 128
+    - 16
+  max_range: 50.0
+  max_volume_space:
+  - 51.2
+  - 25.6
+  - 4.4
+  min_volume_space:
+  - 0
+  - -25.6
+  - -2
+  num_points: 180000
+  point_cloud_range:
+  - 0
+  - -25.6
+  - -2
+  - 51.2
+  - 25.6
+  - 4.4
+  resolution: 0.05
+  split: train
+  std_axis_norm: false
+  test:
+  - '11'
+  - '12'
+  - '13'
+  - '14'
+  - '15'
+  - '16'
+  - '17'
+  - '18'
+  - '19'
+  - '20'
+  - '21'
+  train:
+  - '00'
+  - '01'
+  - '02'
+  - '03'
+  - '04'
+  - '05'
+  - '06'
+  - '07'
+  - '09'
+  - '10'
+  validation:
+  - 08
+diff:
+  beta_end: 0.007
+  beta_func: linear
+  beta_start: 3.5e-05
+  reg_weight: 0.0
+  s_steps: 50
+  t_steps: 1000
+experiment:
+  id: upsample
+model:
+  fea_dim:
+  - 3
+  - 32
+  - 64
+  - 128
+  init_size:
+  - 32
+  - 64
+  - 128
+  - 256
+  out_dim: 64
+  out_fea_dim: 256
+train:
+  batch_size: 2
+  decay_lr: 0.0001
+  lr: 0.0001
+  max_epoch: 20
+  mode: true
+  n_gpus: 2
+  num_workers: 6
+  uncond_prob: 0.1
+  uncond_w: 6.0
