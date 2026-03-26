@@ -48,7 +48,7 @@ python3 map_from_scans.py --path Datasets/SemanticKITTI/dataset/sequences/
 ```
 ### Pretrained weights
 
-The pretrained weight can be downloaded [here]() , and put the pretrained wieght into the folder in ckpt/checkpoints/.
+The pretrained weight can be downloaded [here](https://pan.baidu.com/s/1F8gPH7e8rMAgM52ZZ2EbAw)(code: XJ98) , and put the pretrained wieght into the folder in ckpt/checkpoints/.
 
 ## Usage
 
