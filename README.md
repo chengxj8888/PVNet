@@ -1,5 +1,7 @@
 # PVNet: Point-Voxel Interaction LiDAR Scene Upsampling Via Diffusion Models
 
+Cheng Xianjing,  Wu Lintai, Wang Zuowen, Hou Junhui, Wen Jie, Xu Yong *
+
 **[Paper](https://ieeexplore.ieee.org/document/11207156)**
 
 We propose a diffusion model-based point-voxel interaction framework (PVNet) to perform LiDAR point cloud upsampling without dense supervision. Our methed achieves scene-level point cloud upsampling method with arbitrary upsampling rates.
