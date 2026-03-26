@@ -1,0 +1,48 @@
+experiment:
+    id: upsample
+
+##Data
+data:
+    data_dir: './Datasets/SemanticKITTI'
+    resolution: 0.05
+    dataloader: 'KITTI'
+    split: 'train'
+    train: [ '00', '01', '02', '03', '04', '05', '06', '07', '09', '10' ]
+    validation: ['08']
+    test: ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21']
+    num_points: 180000
+    max_range: 50.
+    dataset_norm: False
+    std_axis_norm: False
+    max_volume_space: [51.2, 25.6, 4.4]
+    min_volume_space: [0, -25.6, -2]
+    grid_sizes: [[128, 128, 16]]      # default: [128, 128, 16]
+    point_cloud_range: [0, -25.6, -2, 51.2, 25.6, 4.4]
+    
+# Training
+train:
+    uncond_prob: 0.1
+    uncond_w: 6.
+    n_gpus: 1
+    num_workers: 8
+    max_epoch: 4
+    lr: 1.0e-4
+    batch_size: 1
+    decay_lr: 1.0e-4
+    mode: True
+    
+diff:
+    beta_start: 3.5e-5
+    beta_end: 0.007
+    beta_func: 'linear'
+    t_steps: 1000
+    s_steps: 4
+    reg_weight: 0.0
+    
+##Network
+model:
+    fea_dim: [3, 32, 64, 128]
+    out_fea_dim: 256
+    # num_input_features: [32, 64, 128, 256]
+    init_size: [32, 64, 128, 256]
+    out_dim: 64 
